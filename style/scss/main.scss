@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+$theme-colors: (
+        "primary": #251B6A,
+        "secondary": #1B1638,
+        "light": #ffffff,
+        "dark": #656276,
+        "gray-dark": #777777,
+        "gray": #EFF1F5
+);
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+$display1-size: 3rem !default;
+$display2-size: 2.5rem !default;
+$display3-size: 2rem !default;
+$display4-size: 1.5rem !default;
+
+$font-size-base: 1rem !default;
+$lead-font-size: $font-size-base * 1.15 !default;
+$small-font-size: 0.85rem !default;
+
+@import "./../../node_modules/bootstrap/scss/bootstrap";
+
+@each $item in left, right, top, bottom {
+  .position-#{$item} {
+    #{$item}: 0;
+  }
+}
+
+@each $item in 90, 180, 270, 360 {
+  .rotate-#{$item} {
+    transform: rotate(#{$item}deg);
+  }
+}
+
+@each $item in left, right, center {
+  .transform-origin-#{$item} {
+    transform-origin: #{$item};
+  }
+}
+
+@each $item in center, justify, right, left {
+  .text-align-#{$item} {
+    text-align: #{$item};
+  }
+}
+
+@each $item in 0, 10, 20 {
+  .z-index-#{$item} {
+    z-index: #{$item};
+  }
+}
+
+.resize-none {
+  resize: none;
+}
+
+.writing-mode-vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.text-stroke-light {
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.opacity-0 {
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// TODO: FIX IT WITH EACH
+
+.bg-opacity-3 {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.bg-opacity-5 {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.bg-opacity-7 {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.font-family-secondary {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.bg-gray-linear {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
